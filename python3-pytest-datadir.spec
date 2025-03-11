@@ -6,7 +6,7 @@ Summary:	pytest plugin for test data directories and files
 Summary(pl.UTF-8):	Wtyczka pytesta do katalogów i plików z danymi testowymi
 Name:		python3-pytest-datadir
 Version:	1.4.1
-Release:	2
+Release:	3
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/pytest-datadir/
