@@ -5,22 +5,23 @@
 Summary:	pytest plugin for test data directories and files
 Summary(pl.UTF-8):	Wtyczka pytesta do katalogów i plików z danymi testowymi
 Name:		python3-pytest-datadir
-Version:	1.4.1
-Release:	3
+Version:	1.6.1
+Release:	1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/pytest-datadir/
-Source0:	https://files.pythonhosted.org/packages/source/p/pytest-datadir/pytest-datadir-%{version}.tar.gz
-# Source0-md5:	d5043376db09d710e24a71b96026d728
+Source0:	https://files.pythonhosted.org/packages/source/p/pytest-datadir/pytest_datadir-%{version}.tar.gz
+# Source0-md5:	454415167daa5c9040a7ea474939bf90
 URL:		https://pypi.org/project/pytest-datadir/
-BuildRequires:	python3-modules >= 1:3.6
-BuildRequires:	python3-setuptools
+BuildRequires:	python3-modules >= 1:3.8
+BuildRequires:	python3-setuptools >= 1:61
+BuildRequires:	python3-setuptools_scm >= 6.2
 %if %{with tests}
-BuildRequires:	python3-pytest >= 5.0
+BuildRequires:	python3-pytest >= 7.0
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
-Requires:	python3-modules >= 1:3.6
+Requires:	python3-modules >= 1:3.8
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,7 +33,7 @@ Wtyczka pytesta do operowania na katalogach i plikach z danymi
 testowymi.
 
 %prep
-%setup -q -n pytest-datadir-%{version}
+%setup -q -n pytest_datadir-%{version}
 
 %build
 %py3_build
